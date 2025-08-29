@@ -1,0 +1,183 @@
+.logo-regulations {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 30px 20px;
+  font-family: "Arial", sans-serif;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.section-label {
+  color: #e94b3c;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.regulation-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 10px 0;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.main-row {
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+}
+
+/* 왼쪽 컬럼 (로고, 서체) */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0.4;
+}
+
+.sub-label {
+  font-family: "Coolvetica Regular", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.logo-image {
+  max-width: 410px;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.font-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.font-name {
+  font-family: "Coolvetica Regular", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 3.3rem;
+  color: #111;
+}
+
+/* 오른쪽 컬럼 (색상 + 조합규정) */
+.right-column {
+  display: flex;
+  gap: 14px;
+  flex: 0.5;
+  max-width: 460px;
+  align-items: flex-start;
+}
+
+/* 컬러 + 조합규정 래퍼 */
+.color-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 100px;
+}
+
+/* 색상 섹션 (원, 헥스코드 세로정렬) */
+.color-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 색상 아이템 (원+텍스트 수직정렬) */
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.color-swatch.red {
+  background: linear-gradient(135deg, #f26f63 0%, #e84f3c 100%);
+}
+
+.color-swatch.blue {
+  background-color: #6acbda;
+}
+
+.color-hex {
+  font-weight: 480;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  user-select: text;
+}
+
+/* 조합규정 래퍼 */
+.combination-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.combination-image {
+  width: 700px;
+  border-radius: 100px;
+  height: auto;
+  align-self: flex-start;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+/* 글자 효과 추가 */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideInLeft 0.6s forwards ease-out;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-out-left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideOutLeft 0.4s forwards ease-in;
+}
+
+@keyframes slideOutLeft {
+  to {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}

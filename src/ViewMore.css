@@ -1,0 +1,137 @@
+.gallery-section {
+  position: relative;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: nowrap; /* 카드 겹치지 않도록 */
+  overflow-x: auto;  /* 가로 스크롤 */
+  padding-bottom: 10px;
+  flex: 1 1 auto;
+}
+
+.card {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: baseline;
+}
+
+.number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.image-container.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.image-container.slide-out-left {
+  animation-name: slideOutLeft;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.view-more-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 180px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.view-more-wrapper.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+.view-more-wrapper.slide-out-left {
+  animation-name: slideOutLeft;
+}
+
+.view-more-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #111;
+  user-select: none;
+}
+
+.view-more-line {
+  width: 136px;
+  height: 2px;
+  background-color: #111;
+  margin-top: 6px;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  to {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}

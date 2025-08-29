@@ -2,6 +2,8 @@ import BrandIntro from "./BrandIntro";
 import LogoRegulations from "./LogoRegulations";
 import AnimatedSection from "./AnimatedSection";
 import FirstScreen from "./FirstScreen";
+import CoreValue from "./CoreValue";
+import ViewMore from "./ViewMore";
 
 function App() {
   return (
@@ -14,6 +16,12 @@ function App() {
       </AnimatedSection>
       <AnimatedSection>
         <LogoRegulations />
+      </AnimatedSection>
+      <AnimatedSection>
+        <CoreValue />
+      </AnimatedSection>
+      <AnimatedSection>
+        <ViewMore />
       </AnimatedSection>
     </div>
   );
